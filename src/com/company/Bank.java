@@ -28,11 +28,21 @@ public class Bank {
     }
 
     public void addBranchCustomer(String branchName, String customerName, double initialAmount){
-
+        if (branchIsOnFile(branchName)){
+            Branch branch = returnBranch(customerName).addCustomer(customerName,initialAmount);
+        }
     }
 
     public void addBranchCustomerTransaction(String branchName, String customerName, double transactionAmount){
 
+    }
+
+    public Branch returnBranch(String branchName){
+        for (int i=0;i<branches.size();i++){
+            if (branches.get(i).getName().contains(branchName)){
+                return branches.get(i);
+            }
+        }return null;
     }
 
     private boolean branchIsOnFile(String branchName){
