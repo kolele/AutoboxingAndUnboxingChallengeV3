@@ -28,7 +28,7 @@ public class Bank {
     }
 
     public void addBranchCustomer(String branchName, String customerName, double initialAmount){
-        
+
     }
 
     public void addBranchCustomerTransaction(String branchName, String customerName, double transactionAmount){
