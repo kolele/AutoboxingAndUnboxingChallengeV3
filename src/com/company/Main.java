@@ -8,6 +8,9 @@ public class Main {
         bank.addBranchCustomer("nbgd","kole",20);
         bank.addBranchCustomer("nbgd","sale",10);
         bank.printBranchCustomers("nbgd",true);
+        bank.addNewBranch("lebac");
+        bank.addBranchCustomer("lebac","nikola",30);
+        bank.printBranchCustomers("lebac", true);
 
     }
 }
