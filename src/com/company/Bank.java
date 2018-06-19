@@ -29,8 +29,11 @@ public class Bank {
 
     public void addBranchCustomer(String branchName, String customerName, double initialAmount){
         if (branchIsOnFile(branchName)){
-            Branch branch = returnBranch(customerName).addCustomer(customerName,initialAmount);
+            Branch branch = returnBranch(branchName);
+            branch.addCustomer(customerName,initialAmount);
+            System.out.println("Added customer with name " + customerName + "to " + branchName + " branch.");
         }
+        else System.out.println("No such branch");
     }
 
     public void addBranchCustomerTransaction(String branchName, String customerName, double transactionAmount){
