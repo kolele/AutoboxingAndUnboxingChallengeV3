@@ -38,6 +38,18 @@ public class Branch {
         }
     }
 
+    public void printCustomers(){
+        for (int i=0; i<customers.size();i++){
+            System.out.println(customers.get(i).getName());
+        }
+    }
+
+    public void printTransctions(){
+        for (int i=0; i<customers.size();i++){
+            System.out.println(customers.get(i).getTransactions());
+        }
+    }
+
     public Customer returnCustomer(String customerName){
         for (int i=0;i<customers.size();i++){
             if (customers.get(i).getName().matches(customerName)){

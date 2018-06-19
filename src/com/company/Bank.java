@@ -37,7 +37,21 @@ public class Bank {
     }
 
     public void addBranchCustomerTransaction(String branchName, String customerName, double transactionAmount){
+        if (branchIsOnFile(branchName)){
+            Branch branch = returnBranch(branchName);
+            branch.addTransaction(customerName,transactionAmount);
+        }else {
+            System.out.println("No such branch");
+        }
+    }
 
+    public void printBranchCustomers(String branchName, boolean printTransactions){
+        Branch branch = returnBranch(branchName);
+        if (branchIsOnFile(branchName)){
+            branch.printCustomers();
+        } if (printTransactions){
+            branch.printTransctions();
+        }
     }
 
     public Branch returnBranch(String branchName){
