@@ -11,6 +11,10 @@ public class Main {
         bank.addNewBranch("lebac");
         bank.addBranchCustomer("lebac","nikola",30);
         bank.printBranchCustomers("lebac", true);
+        bank.addBranchCustomerTransaction("nbgd", "kole", 12.22);
+        bank.printBranchCustomers("nbgd",true);
+        bank.printBranchCustomers("JAOJ",true);
+
 
     }
 }
